@@ -17,6 +17,6 @@ bool is_valid_grade(const char *grade) {
     return true;
 }
 
-bool is_valid_gpa(const float *gpa) {
-    return (*gpa >= 0.0f && *gpa <= 4.5f);
+bool is_valid_gpa(const float gpa) {
+    return (gpa >= 0.0f && gpa <= 4.5f);
 }

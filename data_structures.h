@@ -4,7 +4,7 @@
 #include <stdbool.h>
 
 #define MAX_COURSE_NAME_LENGTH 40
-#define MAX_GPA_LENGTH 5
+#define MAX_GPA_LENGTH 4
 
 typedef struct
 {
@@ -15,6 +15,6 @@ typedef struct
 } Course;
 
 bool is_valid_grade(const char *grade);
-bool is_valid_gpa(const float *gpa);
+bool is_valid_gpa(const float gpa);
 
 #endif
