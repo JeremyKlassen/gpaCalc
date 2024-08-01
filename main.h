@@ -3,6 +3,6 @@
 
 #include "data_structures.h"
 
-void read_array(Course courses[], int *size);
+void choose_input(Course courses[], int *size);
 
 #endif

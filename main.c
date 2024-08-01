@@ -8,7 +8,7 @@ int main () {
 
     int size = 0;
     Course courses[INITIAL_CAPACITY];
-    read_array(courses, &size);
+    choose_input(courses, &size);
     printf("%i courses added.", size);
     printf("Your course is %s \n", courses[0].course_name); 
     printf("Your gpa is %.1f \n", courses[0].gpa);
@@ -16,7 +16,7 @@ int main () {
 
     
 
-void read_array(Course courses[], int *size){
+void choose_input(Course courses[], int *size){
     int userChoice;
     bool course_added;
     while(1) {
@@ -56,4 +56,3 @@ void read_array(Course courses[], int *size){
             *size++;
     }
 }
-
