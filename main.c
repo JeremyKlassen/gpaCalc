@@ -33,7 +33,15 @@ void choose_input(Course courses[], int *size){
             break;
         }
 
-        printf("Enter course name: ");
+        enter_a_course(courses, size, &course_added);
+       
+        if(course_added)
+            *size++;
+    }
+}
+
+void enter_a_course(Course courses[], int *size, bool *pcourse_added) {
+     printf("Enter course name: ");
         scanf("%s", courses[*size].course_name);
 
         printf("Enter GPA: ");
@@ -41,7 +49,7 @@ void choose_input(Course courses[], int *size){
         const float gpa = courses[*size].gpa;
         if(!is_valid_gpa(gpa)) {
             printf("Not a valid GPA\n");
-            course_added = false;
+            pcourse_added = false;
         }
 
         while(getchar() != '\n');
@@ -49,10 +57,7 @@ void choose_input(Course courses[], int *size){
         fgets(courses[*size].grade,3,stdin);
         if(!is_valid_grade(courses[*size].grade)){
             printf("Not a valid grade. \n");
-            course_added = false;
+            pcourse_added = false;
         }
-        
-        if(course_added)
-            *size++;
-    }
+    
 }
